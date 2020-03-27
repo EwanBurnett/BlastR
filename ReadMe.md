@@ -18,6 +18,8 @@ All Shots contain parameters for their:
   - base damage
     - The scalable damage of the shot. This is used in Damage calculation, which also takes the shot's level into account.
   - base speed
+    - The speed at which the shot travels. Expressed as an impulse exerted on the shot's rigidbody.
+
 #####  Normal Shot ![Alt text](/Documentation/Shots/Shot_Normal_64.png)
 
 Normal Shots are standard fare - shooting in a straight line, with upgrades increasing their speed.
@@ -30,9 +32,9 @@ Spread Shot upgrades increase the number of bullets fired per shot.
 
 ##### Cluster Shot ![Alt text](/Documentation/Shots/Shot_Normal_64.png)
 
-Cluster shots fragment after being shot, with fragments dealing 1/10th of the shot's actual damage to any enemies they hit.
+Cluster shots fragment on impact, with fragments dealing 1/10th of the shot's damage to any enemies they hit.
 
-Cluster shot upgrades increase the number of fragments.
+Cluster shot upgrades increase the number of fragments released.
 
 ##### Beam Shot ![Alt text](/Documentation/Shots/Shot_Normal_64.png)
 
@@ -45,3 +47,32 @@ Beam shot upgrades increase the beam's width.
 Pryzm Shots create a temporary damage over time field on the screen, dealing 1/20th base damage to any overlapping enemies per tick.
 
 Pryzm Shot upgrades decrease the tick interval of the field.
+
+#### Buffs
+There are a number of Buffs which the player can acquire from Pickups in the stage.
+- Speed Up
+  - Increases the player's Speed value by 1.
+- Strength Up
+  - Increases the player's Strength value by 1.
+- Invincibility
+  - Allows the player to be invincible for a duration of time.
+- Clone
+  - Creates a mirrored clone of the player, which repeats the same inputs.
+- Assist
+  - Summons an AI fighter to assist you through the level. Dissipates after a certain amount of time.
+
+#### Debuffs
+However, some pickups and certain enemies can inflict Debuffs to the player as well...
+- Speed Down
+  - Decreases the player's Speed value by 1.
+- Strength Down
+  - Decreases the player's Strength value by 1.
+- Stun
+  - Prevents the player from executing actions for a duration of time
+- Electrocution
+  - Deals constant Damage Over Time to the player over a duration of time.
+- Glitch
+  - Disrupts the player's HUD and Field of View, and adds a Glitch filter effect to the screen.
+
+### User Interface
+![Alt text](./Documentation/UIWireframe.svg)
