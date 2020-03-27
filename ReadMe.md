@@ -9,6 +9,15 @@ The Player takes control of a Flight Unit, capable of shooting simple projectile
 ### Shot Types, Buffs and Debuffs
 ![Alt text](./Documentation/MechanicsUML.svg)
 #### Shots
+
+All Shots contain parameters for their:
+  - level
+    - The level of the shot itself. Is actually contained within the GameController object, but is replicated to each instance of the shot.
+    - Is an integer ranging between 1 and 20 (XX)
+    - 1-9 is displayed as just the number, the 10's column is displayed as an X (i.e 16 = X6)
+  - base damage
+    - The scalable damage of the shot. This is used in Damage calculation, which also takes the shot's level into account.
+  - base speed
 #####  Normal Shot ![Alt text](/Documentation/Shots/Shot_Normal_64.png)
 
 Normal Shots are standard fare - shooting in a straight line, with upgrades increasing their speed.
