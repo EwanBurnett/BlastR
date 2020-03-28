@@ -6,6 +6,11 @@ The Player takes control of a Flight Unit, capable of shooting simple projectile
 
 ![Alt text](./Documentation/PlayerInteractions.svg)
 
+Players can move, dodge and shoot in BlastR - a simple moveset with high potential. Some enemies may test whether the player can dodge through a shield, if they can navigate a field of bullets, or if they can simply destroy the enemy before a powerful attack is carried out.
+
+Dodging sets the IsDodging flag in the player to True, which allows them to temporarily avoid taking damage. However, the player only has a set number of dodges, which recharge over time.
+
+
 ### Shot Types, Buffs and Debuffs
 ![Alt text](./Documentation/MechanicsUML.svg)
 #### Shots
@@ -74,7 +79,10 @@ However, some pickups and certain enemies can inflict Debuffs to the player as w
 - Glitch
   - Disrupts the player's HUD and Field of View, and adds a Glitch filter effect to the screen.
 
-### User Interface
+## AI
+
+
+## User Interface
 ![Alt text](./Documentation/UIWireframe.svg)
 
 BlastR's in-game UI displays information the player will constantly need to keep track of in the bottom bar:
@@ -86,3 +94,5 @@ In addition to this, the Score is always visible in the top right.
 
 
 Other information, like stats or level progress, can be found in the sidebar - which can be hidden at the user's discretion.
+
+To suit this UI design, all of the action within the game will be constrained to within the center area, using the width of the sidebar as a border.
