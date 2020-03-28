@@ -76,3 +76,13 @@ However, some pickups and certain enemies can inflict Debuffs to the player as w
 
 ### User Interface
 ![Alt text](./Documentation/UIWireframe.svg)
+
+BlastR's in-game UI displays information the player will constantly need to keep track of in the bottom bar:
+- Health
+- Current Shot Type
+- Buffs & Debuffs
+
+In addition to this, the Score is always visible in the top right.
+
+
+Other information, like stats or level progress, can be found in the sidebar - which can be hidden at the user's discretion.
